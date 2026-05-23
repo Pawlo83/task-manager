@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --surface-2: #f8fafc;
+    --border: #e2e8f0;
+
+    --text: #0f172a;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+
+    --primary: #369ddd;
+    --primary-hover: #4f46e5;
+    --primary-text: #ffffff;
+
+
+    --col-new: #f59e0b;
+    --col-new-bg: #fffbeb;
+    --col-new-badge-bg: #fde68a;
+    --col-new-badge-tx: #92400e;
+
+    --col-progress: #8b5cf6;
+    --col-progress-bg: #f5f3ff;
+    --col-progress-badge-bg: #ddd6fe;
+    --col-progress-badge-tx: #4c1d95;
+
+    --col-done: #10b981;
+    --col-done-bg: #f0fdf4;
+    --col-done-badge-bg: #a7f3d0;
+    --col-done-badge-tx: #065f46;
+
+    --danger: #ef4444;
+    --danger-bg: #fef2f2;
+    --danger-text: #b91c1c;
+
+    --success-bg: #dcfce7;
+    --success-text: #166534;
+    --error-bg: #fee2e2;
+    --error-text: #b91c1c;
+}
+
+.dark {
+    --bg: #1a1917;
+    --surface: #222120;
+    --surface-2: #2a2927;
+    --border: #38372f;
+    --text: #e8e6e1;
+    --text-secondary: #a09e99;
+    --text-muted: #58564f;
+    --primary: #345a88;
+    --primary-hover: #6366f1;
+    --primary-text: #ffffff;
+    --col-new: #fbbf24;
+    --col-new-bg: #1e1a08;
+    --col-new-badge-bg: #2d2408;
+    --col-new-badge-tx: #fde68a;
+    --col-progress: #a78bfa;
+    --col-progress-bg: #1a1028;
+    --col-progress-badge-bg: #251840;
+    --col-progress-badge-tx: #ddd6fe;
+    --col-done: #34d399;
+    --col-done-bg: #071a12;
+    --col-done-badge-bg: #0a2a1e;
+    --col-done-badge-tx: #a7f3d0;
+    --danger: #f87171;
+    --danger-bg: #2d1010;
+    --danger-text: #fca5a5;
+    --success-bg: #0a2a1e;
+    --success-text: #34d399;
+    --error-bg: #2d1010;
+    --error-text: #f87171;
+}
+
+/* ── Animations ── */
+@keyframes card-enter {
+    from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes card-delete {
+    0%   { opacity: 1; transform: scale(1) translateX(0); max-height: 300px; margin-bottom: 0.5rem; }
+    45%  { opacity: 0; transform: scale(0.94) translateX(20px); }
+    100% { opacity: 0; max-height: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; border-width: 0; }
+}
+
+.card-enter {
+    animation: card-enter 0.18s ease-out both;
+}
+
+.card-deleting {
+    animation: card-delete 0.36s ease-out forwards;
+    overflow: hidden;
+    pointer-events: none;
+}
