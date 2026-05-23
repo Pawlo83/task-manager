@@ -103,7 +103,7 @@ Same backend variables as above, plus:
 | `APP_CROSS_ORIGIN` | `true` — enables `SameSite=None; Secure` cookies |
 | `CORS_ALLOWED_ORIGINS` | `https://your-frontend.address` |
 
-### Split-host frontend:
+### Split-host frontend
 | Variable | Value |
 |---|---|
 | `VITE_API_BASE_URL` | `https://your-backend.render.com` |
